@@ -3,7 +3,8 @@ package com.example.cachingdatawithcleanarchitecture
 
 import android.app.Application
 import androidx.room.Room
-import com.example.data.remote.RestaurantDatabase
+import com.example.data.mapper.RestaurantMapper
+import com.example.data.local.RestaurantDatabase
 import com.example.data.remote.RestaurantApi
 import com.example.data.repository.RestaurantRepositoryImpl
 import com.example.domain.repository.RestaurantRepository
@@ -35,8 +36,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideRestaurantRepository(api: RestaurantApi,db: RestaurantDatabase): RestaurantRepository =
-        RestaurantRepositoryImpl(api,db)
+    fun provideRestaurantRepository(api: RestaurantApi,db: RestaurantDatabase,restaurantMapper: RestaurantMapper): RestaurantRepository =
+        RestaurantRepositoryImpl(api,db,restaurantMapper)
 
     @Provides
     @Singleton

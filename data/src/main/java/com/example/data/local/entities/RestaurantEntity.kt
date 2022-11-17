@@ -1,4 +1,4 @@
-package com.example.domain.entities
+package com.example.data.local.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -6,15 +6,10 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "restaurants")
 
-data class Restaurant(
+data class RestaurantEntity(
     @PrimaryKey val name: String,
     val address: String,
-    val description: String,
-    val id: Int,
     val logo: String,
-    val phoneNumber: String,
-    val review: String,
     val type: String,
-    val uid: String
 )
 

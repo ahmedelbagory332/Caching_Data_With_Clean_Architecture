@@ -1,7 +1,7 @@
 package com.example.data.remote
 
 
-import com.example.domain.dto.RestaurantDto
+import com.example.data.remote.dto.RestaurantDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 

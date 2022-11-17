@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11">
+    <bytecodeTargetLevel target="1.8">
       <module name="Caching_Data_With_Clean_Architecture.common" target="11" />
       <module name="Caching_Data_With_Clean_Architecture.common3" target="11" />
+      <module name="Caching_Data_With_Clean_Architecture.domains" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

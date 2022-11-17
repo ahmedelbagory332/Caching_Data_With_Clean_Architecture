@@ -1,6 +1,6 @@
 package com.example.domain.repository
 
-import com.example.domain.model.RestaurantModel
+import com.example.domain.RestaurantModel
 import kotlinx.coroutines.flow.Flow
 
 

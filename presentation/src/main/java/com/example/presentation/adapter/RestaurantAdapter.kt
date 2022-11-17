@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.domain.entities.Restaurant
+import com.example.domain.model.RestaurantModel
 import com.example.presentation.R
 import javax.inject.Inject
 
 class RestaurantAdapter @Inject constructor(private val ctx:Application) :
-    ListAdapter<Restaurant, RestaurantAdapter.RestaurantViewHolder>(RestaurantDiffCallback) {
+    ListAdapter<RestaurantModel, RestaurantAdapter.RestaurantViewHolder>(RestaurantDiffCallback) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder =
@@ -49,12 +49,12 @@ class RestaurantAdapter @Inject constructor(private val ctx:Application) :
 
 }
 
-object RestaurantDiffCallback : DiffUtil.ItemCallback<Restaurant>() {
-    override fun areItemsTheSame(oldItem: Restaurant, newItem: Restaurant): Boolean {
+object RestaurantDiffCallback : DiffUtil.ItemCallback<RestaurantModel>() {
+    override fun areItemsTheSame(oldItem: RestaurantModel, newItem: RestaurantModel): Boolean {
         return oldItem == newItem
     }
 
-    override fun areContentsTheSame(oldItem: Restaurant, newItem: Restaurant): Boolean {
+    override fun areContentsTheSame(oldItem: RestaurantModel, newItem: RestaurantModel): Boolean {
         return oldItem.name == newItem.name
     }
 }
